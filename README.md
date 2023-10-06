@@ -1,7 +1,4 @@
 # Active Directory Performance Assessment with Azure Monitor workbook
-- [Overview](https://github.com/dmrellan/Active-Directory-Performance-Assessment-with-Azure-Monitor-workbook/edit/main/README.md#overview)
-- [Workbook Summary](https://github.com/dmrellan/Active-Directory-Performance-Assessment-with-Azure-Monitor-workbook/edit/main/README.md#workbook-summary)
-
 ## Overview
 Today, I am here to talk to you about monitoring your custom performance counters using the Azure Monitor workbook. I will use the Active Directory Domain Controllers as an example in this case. Here, you will find the analysis of the most essential Perf Counters to assess an Active Directory environment.
  
