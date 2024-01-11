@@ -1,4 +1,4 @@
-# Active Directory Performance Assessment with Azure Monitor workbook
+# Active Directory Performance Assessment workbook
 ## Overview
 Today, I am here to talk to you about monitoring your custom performance counters using the Azure Monitor workbook. In this case, I will use the Active Directory Domain Controllers as an example. Here, you will find the analysis of the most essential Perf Counters to assess an Active Directory environment.
  
@@ -9,12 +9,12 @@ But what happens if you want to collect and start monitoring custom Performance 
 I want to share the Active Directory Performance Assessment workbook, which I have been working on and will help you to monitor your Active Directory environment. You can use this as an example of a custom Azure Workbook to visualize Performance Counters. Specifically, you are going to find tiles, graphs, and dashboards for Operating System and Active Directory performance counters listed on **_Materials/List_of_Performance_Counters.txt_** file.
 
 To use this workbook, you only need to follow these steps:
-- 1 - Use the Azure Monitor Agent (and Azure ARC if your servers are out of Azure) to connect your Domain Controllers to your Log Analytics. [Doc](https://learn.microsoft.com/en-us/azure/azure-monitor/agents/azure-monitor-agent-manage?tabs=azure-portal)
-- 2 - Create a [Data Collection Rule](https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/data-collection-rule-overview?tabs=portal) to collect the mentioned performance counters and associate it to your Domain Controllers. You will find a DCR template (_DCR-ADPAS-PerformanceCounters-TEMPLATE.json_ file) to do that in the **_Materials_** folder.
-- 3 - Deploy the Azure Workbook you will find in the **_Materials_** fodler (_Active Directory Performance Assessment v4.workbook_ file).
+1. Use the [**Azure Monitor Agent**](https://learn.microsoft.com/en-us/azure/azure-monitor/agents/azure-monitor-agent-manage?tabs=azure-portal) to connect your Domain Controllers to Log Analytics.
+2. Create a [**Data Collection Rule**](https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/data-collection-rule-overview?tabs=portal) to collect the performance counters and associate it to your Domain Controllers. (You will find the _DCR-ADPAS-PerformanceCounters-TEMPLATE.json_ file to do that in the **_Materials_** folder).
+3. Deploy the **Active Directory Performance Assessment Workbook** you will find in the **_Materials_** folder.
 
 ## Workbook Summary
-ADPAS with Azure Monitor workbook
+ADPA with Azure Monitor workbook
 The Azure Workbook is divided into four sections (Availability, Operating System, Active Directory, and Detailed).
 
 ![image](https://github.com/dmrellan/Active-Directory-Performance-Assessment-with-Azure-Monitor-workbook/assets/35997289/eb823dfc-eeee-4e3f-baf6-e42370f1aa23)
