@@ -51,6 +51,6 @@ It allows the detailed analysis of the selected counter and computer. Customized
 ----
 **Version History**
 
-_v4_
+_v4_ (11/01/2024)
 - Workbook: Typos and links improved. Added Top tables to Operating System tab.
 - Data Collection Rule _template_ provided.
