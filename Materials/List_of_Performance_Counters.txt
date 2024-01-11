@@ -1,0 +1,67 @@
+Database(lsass)\Database Cache % Hit
+Database(lsass)\Database Cache Size (MB)
+Database(lsass)\Database Cache Size Effective (MB)
+DirectoryServices(NTDS)\DRA Pending Replication Operations
+DirectoryServices(NTDS)\DRA Pending Replication Synchronizations
+DirectoryServices(NTDS)\LDAP Client Sessions
+LogicalDisk(*)\% Free Space
+LogicalDisk(*)\% Idle Time
+LogicalDisk(*)\Avg. Disk Queue Length
+LogicalDisk(*)\Avg. Disk Read Queue Length
+LogicalDisk(*)\Avg. Disk sec/Read
+LogicalDisk(*)\Avg. Disk sec/Write
+LogicalDisk(*)\Avg. Disk Write Queue Length
+LogicalDisk(*)\Free Megabytes
+Memory\% Committed Bytes In Use
+Memory\Available MBytes
+Memory\Free System Page Table Entries
+Memory\Pages/sec
+Memory\Pool Nonpaged Bytes
+Memory\Pool Paged Bytes
+Memory\System Cache Resident Bytes
+Netlogon(_Total)\Average Semaphore Hold Time
+Netlogon(_Total)\Semaphore Acquires
+Netlogon(_Total)\Semaphore Timeouts
+Network Interface(*)\Output Queue Length
+NTDS\ATQ Estimated Queue Delay
+NTDS\ATQ Outstanding Queued Requests
+NTDS\ATQ Request Latency
+NTDS\ATQ Threads LDAP
+NTDS\ATQ Threads Other
+NTDS\ATQ Threads Total
+NTDS\DRA Pending Replication Operations
+NTDS\DRA Pending Replication Synchronizations
+NTDS\LDAP Active Threads
+NTDS\LDAP Bind Time
+NTDS\LDAP Searches/sec
+NTDS\LDAP Successful Binds/sec
+NTDS\LDAP Writes/sec
+NTDS\NTLM Binds/sec
+Paging File(*)\% Usage
+Process(dfrs)\Handle Count"
+Process(dfsrs)\% Processor Time
+Process(dfsrs)\Private Bytes
+Process(dfsrs)\Working Set
+Process(dns)\% Processor Time
+Process(dns)\Handle Count
+Process(dns)\Private Bytes
+Process(dns)\Working Set
+Process(lsass)\% Processor Time
+Process(lsass)\Handle Count
+Process(lsass)\Private Bytes
+Process(lsass)\Working Set
+Processor Information(_Total)\Average Idle Time
+Processor(*)\% Processor Time
+Processor(_Total)\% C1 Time
+Processor(_Total)\% C2 Time
+Processor(_Total)\% C3 Time
+Processor(_Total)\% DPC Time
+Processor(_Total)\% Idle Time
+Processor(_Total)\% Privileged Time
+Processor(_Total)\% Processor Time
+Processor(_Total)\% User Time
+Processor(_Total)\DPC Rate
+Processor(_Total)\DPCs Queued/sec
+Security System-Wide Statistics\Kerberos Authentications
+Security System-Wide Statistics\NTLM Authentications
+TCPv4\Connection Failures
