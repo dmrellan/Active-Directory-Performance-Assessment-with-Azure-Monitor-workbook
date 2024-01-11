@@ -1,0 +1,124 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "dataCollectionRules_DCR_ADPAS_Performance_name": {
+            "defaultValue": "DCR-ADPAS-Performance",
+            "type": "String"
+        },
+        "workspaces_workspaceId": {
+            "defaultValue": "",
+            "type": "String"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.Insights/dataCollectionRules",
+            "apiVersion": "2022-06-01",
+            "name": "[parameters('dataCollectionRules_DCR_ADPAS_Performance_name')]",
+            "location": "westeurope",
+            "kind": "Windows",
+            "properties": {
+                "dataSources": {
+                    "performanceCounters": [
+                        {
+                            "streams": [
+                                "Microsoft-Perf"
+                            ],
+                            "samplingFrequencyInSeconds": 60,
+                            "counterSpecifiers": [
+                                "\\Memory\\% Committed Bytes In Use",
+                                "\\Memory\\Pool Paged Bytes",
+                                "\\Memory\\Pool Nonpaged Bytes",
+                                "\\Memory\\Pages/sec",
+                                "\\Processor(_Total)\\% Processor Time",
+                                "\\Processor(*)\\% Processor Time",
+                                "\\Database(lsass)\\Database Cache % Hit",
+                                "\\Database(lsass)\\Database Cache Size (MB)",
+                                "\\Database(lsass)\\Database Cache Size Effective (MB)",
+                                "\\DirectoryServices(NTDS)\\DRA Pending Replication Operations",
+                                "\\DirectoryServices(NTDS)\\DRA Pending Replication Synchronizations",
+                                "\\DirectoryServices(NTDS)\\LDAP Client Sessions",
+                                "\\LogicalDisk(*)\\% Idle Time",
+                                "\\LogicalDisk(*)\\Avg. Disk Queue Length",
+                                "\\LogicalDisk(*)\\Avg. Disk Read Queue Length",
+                                "\\LogicalDisk(*)\\Avg. Disk sec/Read",
+                                "\\LogicalDisk(*)\\Avg. Disk sec/Write",
+                                "\\LogicalDisk(*)\\Avg. Disk Write Queue Length",
+                                "\\LogicalDisk(*)\\Free Megabytes",
+                                "\\LogicalDisk(*)\\% Free Space",
+                                "\\Network Interface(*)\\Output Queue Length",
+                                "\\Paging File(*)\\% Usage",
+                                "\\Process(dfsrs)\\% Processor Time",
+                                "\\Process(dfsrs)\\Private Bytes",
+                                "\\Process(dfsrs)\\Working Set",
+                                "\\Process(dns)\\% Processor Time",
+                                "\\Process(dns)\\Handle Count",
+                                "\\Process(dns)\\Private Bytes",
+                                "\\Process(dns)\\Working Set",
+                                "\\Process(lsass)\\% Processor Time",
+                                "\\Process(lsass)\\Handle Count",
+                                "\\Process(lsass)\\Private Bytes",
+                                "\\Process(lsass)\\Working Set",
+                                "\\Processor Information(_Total)\\Average Idle Time",
+                                "\\Processor(_Total)\\% C1 Time",
+                                "\\Processor(_Total)\\% C2 Time",
+                                "\\Processor(_Total)\\% C3 Time",
+                                "\\Processor(_Total)\\% DPC Time",
+                                "\\Processor(_Total)\\% Idle Time",
+                                "\\Processor(_Total)\\% Privileged Time",
+                                "\\Processor(_Total)\\% User Time",
+                                "\\Processor(_Total)\\DPC Rate",
+                                "\\Processor(_Total)\\DPCs Queued/sec",
+                                "\\Netlogon(_Total)\\Average Semaphore Hold Time",
+                                "\\Netlogon(_Total)\\Semaphore Acquires",
+                                "\\Netlogon(_Total)\\Semaphore Timeouts",
+                                "\\Memory\\Available MBytes",
+                                "\\Memory\\Free System Page Table Entries",
+                                "\\Memory\\System Cache Resident Bytes",
+                                "\\NTDS\\ATQ Estimated Queue Delay",
+                                "\\NTDS\\ATQ Outstanding Queued Requests",
+                                "\\NTDS\\ATQ Request Latency",
+                                "\\NTDS\\ATQ Threads LDAP",
+                                "\\NTDS\\ATQ Threads Other",
+                                "\\NTDS\\ATQ Threads Total",
+                                "\\NTDS\\DRA Pending Replication Operations",
+                                "\\NTDS\\DRA Pending Replication Synchronizations",
+                                "\\NTDS\\LDAP Active Threads",
+                                "\\NTDS\\LDAP Bind Time",
+                                "\\NTDS\\LDAP Searches/sec",
+                                "\\NTDS\\LDAP Successful Binds/sec",
+                                "\\NTDS\\LDAP Writes/sec",
+                                "\\NTDS\\NTLM Binds/sec",
+                                "\\Security System-Wide Statistics\\Kerberos Authentications",
+                                "\\TCPv4\\Connection Failures",
+                                "\\Security System-Wide Statistics\\NTLM Authentications",
+                                "\\Process(dfrs)\\Handle Count"
+                            ],
+                            "name": "perfCounterDataSource60"
+                        }
+                    ]
+                },
+                "destinations": {
+                    "logAnalytics": [
+                        {
+                            "workspaceResourceId": "[parameters('workspaces_workspaceId')]",
+                            "name": "la-714444227"
+                        }
+                    ]
+                },
+                "dataFlows": [
+                    {
+                        "streams": [
+                            "Microsoft-Perf"
+                        ],
+                        "destinations": [
+                            "la-714444227"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}
