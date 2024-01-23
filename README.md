@@ -13,6 +13,10 @@ To use this workbook, you only need to follow these steps:
 1. Use the [**Azure Monitor Agent**](https://learn.microsoft.com/en-us/azure/azure-monitor/agents/azure-monitor-agent-manage?tabs=azure-portal) to connect your Domain Controllers to Log Analytics.
 2. Create a [**Data Collection Rule**](https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/data-collection-rule-overview?tabs=portal) to collect the performance counters and associate it to your Domain Controllers. (You will find the _DCR-ADPAS-PerformanceCounters-TEMPLATE.json_ file to do that in the **_Materials_** folder).
 3. Deploy the **Active Directory Performance Assessment Workbook** you will find in the **_Materials_** folder.
+4. Before saving the workbook in Edit mode, you need to configure two hidden parameters: 'Subscriptions' and 'Workspace'. Here, you will select the Log Analytics workspaces from which you want to display performance information.
+![image](https://github.com/dmrellan/Active-Directory-Performance-Assessment-with-Azure-Monitor-workbook/assets/35997289/c4cf5019-a05f-43f9-9edf-9cf86256a930)
+
+
 
 ## Workbook Summary
 ADPA with Azure Monitor workbook
